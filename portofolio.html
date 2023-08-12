@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebStudio</title>
+    <link rel="stylesheet" href="css/modern-normalize.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <div class="webstudio">
+          <a
+            href="index.html"
+            style="color: rgb(0, 136, 255); text-decoration: none">
+            Web
+          </a>
+          <a href="index.html" style="color: black; text-decoration: none"
+            >Studio</a
+          >
+        </div>
+
+        <ul class="menu">
+          <li><a href="index.html">Studio</a></li>
+          <li><a href="portofolio.html">Portofolio</a></li>
+          <li><a href="#">Contacts</a></li>
+        </ul>
+
+        <ul class="contact-list">
+          <li><a href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+          <li><a href="tel:+1/212-772-4150">+1 212-772-4150</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <div class="filter-buttons">
+        <button onclick="filterItems('all')">All</button>
+        <button onclick="filterItems('websites')">Web-sites</button>
+        <button onclick="filterItems('apps')">Apps</button>
+        <button onclick="filterItems('design')">Design</button>
+        <button onclick="filterItems('marketing')">Marketing</button>
+      </div>
+
+      <section>
+        <ul id="portofoliolist">
+          <li data-category="websites">
+            Web-site
+            <p>Technoduck</p>
+            <img src="images/img1.jpg" alt="websites" />
+          </li>
+
+          <li data-category="design">
+            Design
+            <p>Porter New Orlean vs Golden Star</p>
+            <img src="images/img2.jpg" alt="Design" />
+          </li>
+
+          <li data-category="apps">
+            Apps
+            <p>Seafood Restaurant</p>
+            <img src="images/img3.jpg" alt="Apps" />
+          </li>
+
+          <li data-category="marketing">
+            Marketing
+            <p>Project Prime</p>
+            <img src="images/img4.jpg" />
+          </li>
+
+          <li data-category="apps">
+            Apps
+            <p>Project Boxes</p>
+            <img src="images/img5.jpg" alt="Apps" />
+          </li>
+
+          <li data-category="websites">
+            Web-site
+            <p>Inspiration has no borders</p>
+            <img src="images/img6.jpg" alt="websites" />
+          </li>
+
+          <li data-category="design">
+            Design
+            <p>Limited Edition</p>
+            <img src="images/img7.jpg" alt="design" />
+          </li>
+
+          <li data-category="Marketing">
+            Marketing
+            <p>Project LAB</p>
+            <img src="images/img8.jpg" alt="marketing" />
+          </li>
+
+          <li data-category="apps">
+            Apps
+            <p>Growing Bussines</p>
+            <img src="images/img9.jpg" alt="apps" />
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <section class="box-bottom">
+        <div>
+          <a
+            href="index.html"
+            style="color: rgb(0, 136, 255); text-decoration: none">
+            Web
+          </a>
+          <a
+            href="index.html"
+            style="color: rgb(255, 255, 255); text-decoration: none">
+            Studio
+          </a>
+          <address>
+            <ul class="contact-list">
+              <li>
+                <a
+                  href="https://www.google.com/search?q=695+Park+Ave%2C+NY+10065%2C+USA&oq=695+Park+Ave%2C+NY+10065%2C+USA&aqs=chrome..69i57j0i22i30.980j0j7&sourceid=chrome&ie=UTF-8">
+                  695 Park Ave, NY 10065, USA
+                </a>
+              </li>
+              <li>
+                <a href="mailto:info@devstudio.com">info@devstudio.com</a>
+              </li>
+              <li>
+                <a href="tel:+1 212-772-4150">+1 212-772-4150</a>
+              </li>
+            </ul>
+          </address>
+        </div>
+      </section>
+    </footer>
+  </body>
+</html>
