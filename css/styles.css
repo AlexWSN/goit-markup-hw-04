@@ -55,6 +55,16 @@ main {
 .menu {
   font-family: "Roboto", sans-serif;
 }
+.menu li a {
+  color: #333; /* Culoarea implicită a linkurilor */
+  text-decoration: none;
+  transition: color 0.3s ease; /* Tranziție de culoare la hover */
+}
+
+.menu li a:hover {
+  color: #007bff; /* Culoarea la hover */
+}
+
 .nav-links a,
 .nav-links a:hover,
 .nav-links a:focus {
@@ -109,6 +119,33 @@ main {
 .menu li:last-child {
   margin-right: 0;
 }
+
+/* Stilizare pentru fiecare element de contact */
+.contact-list ul li {
+  display: flex; /* Afișează elementele pe un rând flexibil */
+  align-items: center; /* Aliniază vertical conținutul */
+  margin-bottom: 10px; /* Spațiu între elementele de contact */
+}
+
+/* Stilizare pentru pictogramele din fiecare element */
+.contact-list ul svg {
+  margin-right: 5px; /* Spațiu între pictogramă și text */
+  fill: #757575; /* Culoarea pictogramei */
+  flex-shrink: 0; /* Împiedică micșorarea pictogramei în containerul flexibil */
+}
+
+/* Stilizare pentru link-uri */
+.contact-list ul a {
+  text-decoration: none; /* Dezactivarea sublinierii */
+  color: #757575; /* Culoarea textului */
+  transition: background-color 0.3s; /* Tranzitie pentru efectul de hover */
+}
+
+/* Stilizare pentru hover */
+.contact-list ul a:hover {
+  background-color: lightgray; /* Exemplu de schimbare a culorii de fundal la hover */
+}
+
 .contact-list {
   display: flex;
   list-style: none;
@@ -141,6 +178,10 @@ main {
   fill: #757575;
   margin-bottom: 5px;
   transition: fill 0.2s; /* Tranzitie de culoare */
+}
+.contact-list li a span {
+  margin-left: 5px;
+  align-items: center;
 }
 
 /*hover/focus */
@@ -188,7 +229,15 @@ a[rel="webstudio"]::after {
   content: "studio";
   color: black;
 }
+a[rel="logo"]::before {
+  content: "web";
+  color: blue;
+}
 
+a[rel="logo"]::after {
+  content: "studio";
+  color: black;
+}
 ul {
   list-style-type: none;
 }
@@ -273,12 +322,76 @@ ul {
   border: none;
   padding: 0;
   margin: 0;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+/* Efect de hover pentru pictograme */
+.designer-card svg {
+  fill: #243c95; /* Culoarea implicită a pictogramelor */
+  transition: fill 0.3s; /* Efect de tranziție pentru schimbarea culorii */
+}
+
+.designer-card:hover svg {
+  fill: #007bff; /* Culoarea la hover */
 }
 
 #myDesigners.container {
   max-width: 1200px;
   margin: 0 auto;
 }
+#myDesigners {
+  background-color: #f7f7f7;
+  padding: 50px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.designers-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+}
+
+.designer-card {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  padding: 20px;
+  width: calc(
+    25% - 20px
+  ); /* Ajustați dimensiunea cardurilor în funcție de nevoile dvs. */
+  box-sizing: border-box;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.designer-card li img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.designer-card h4 {
+  margin-top: 20px;
+}
+
+.designer-card p {
+  color: #888;
+}
+
+.designer-card:hover,
+.designer-card:focus {
+  background-color: #f2f2f2;
+  border-color: #ccc;
+}
+
 /*cele 4 paragrafe mutate prin margin*/
 .feature-list {
   display: flex;
@@ -290,7 +403,7 @@ ul {
   display: flex;
   flex-direction: row;
   margin: 700px 0;
-  gap: 30px;
+  margin-bottom: 0cqmax;
 }
 
 .feature-list li {
@@ -306,7 +419,8 @@ ul {
 .images-list {
   display: flex;
   flex-direction: row;
-  margin: 2500px 0;
+  margin: 0;
+  top: 5px;
 }
 
 .images-list li {
@@ -318,7 +432,7 @@ ul {
 
 .images-list h2 {
   position: absolute;
-  top: 140%;
+  top: 280%; /*mutat h2 what we do*/
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -330,7 +444,7 @@ ul {
 #myDesigners h2 {
   display: flex;
   justify-content: center;
-  margin-top: -500px;
+  margin-top: -950px; /*mutat h2 our team*/
 }
 
 .images-list li {
@@ -353,7 +467,7 @@ ul {
 
 .designers-list h2 {
   position: absolute;
-  top: 1100%;
+  top: 350%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -481,60 +595,80 @@ section button {
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
-
+.client4 {
+  color: #757575;
+  align-items: center;
+}
 #portofoliolist li {
   text-align: center;
 }
 
+#regularcustomers svg:hover,
+#regularcustomers svg:focus {
+  filter: brightness(1.2);
+  stroke: blue;
+  transition: fill 0.3s ease;
+}
+#regularcustomers h2 {
+  text-align: center;
+}
+#regularcustomers svg:nth-of-type(4):hover,
+#regularcustomers svg:nth-of-type(4):hover + .frame {
+  fill: rgb(123, 123, 127);
+  stroke: rgb(134, 134, 139);
+}
+
+svg {
+  margin: 20px;
+}
+
 footer {
-  position: relative;
-  width: 100%;
-  top: 1500px;
-}
-
-.web-footer {
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 31px;
-  letter-spacing: 0.03em;
-}
-
-section.box-bottom {
-  display: flex;
-  width: 1400px;
-  height: 300px;
-  margin: 0;
-  left: 0px;
-  top: 40px;
   background-color: #2f303a;
+  z-index: 2;
+  padding: 30px 0;
 }
-
-.efective-adress {
-  font-weight: 400;
-  font-size: 14;
-  line-height: 1.88;
-  letter-spacing: 0.03em;
-  text-decoration: none;
-  color: #ffffff;
-}
-address {
-  text-align: left;
-}
-
 .box-bottom {
+  background-color: transparent;
+
   display: flex;
-  justify-content: left;
+  justify-content: space-between;
+  align-items: flex-start; /* Alinează la stânga pe verticală */
+  flex-direction: column; /* Afișează adresele de contact în coloană */
 }
 
-footer .contact-list {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+.box-bottom a {
+  text-decoration: none;
+  margin-bottom: 10px; /* Adaugă spațiu între link-uri */
 }
 
-footer .contact-list li {
+.contact {
+  display: flex;
+  flex-direction: column; /* Afișează adresele de contact în coloană */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact li {
   margin-bottom: 10px;
+}
+
+.contact a {
+  color: gray;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.contact a span {
+  margin-left: 5px;
+}
+
+.contact a:hover,
+.contact a:focus {
+  color: #2196f3;
+}
+.social {
+  display: inline-block;
+  margin-left: 500px;
 }
