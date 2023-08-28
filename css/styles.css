@@ -122,14 +122,14 @@ main {
 
 /* Stilizare pentru fiecare element de contact */
 .contact-list ul li {
-  display: flex; /* Afișează elementele pe un rând flexibil */
-  align-items: center; /* Aliniază vertical conținutul */
-  margin-bottom: 10px; /* Spațiu între elementele de contact */
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
 /* Stilizare pentru pictogramele din fiecare element */
 .contact-list ul svg {
-  margin-right: 5px; /* Spațiu între pictogramă și text */
+  margin-right: 0px;
   fill: #757575; /* Culoarea pictogramei */
   flex-shrink: 0; /* Împiedică micșorarea pictogramei în containerul flexibil */
 }
@@ -141,9 +141,8 @@ main {
   transition: background-color 0.3s; /* Tranzitie pentru efectul de hover */
 }
 
-/* Stilizare pentru hover */
-.contact-list ul a:hover {
-  background-color: lightgray; /* Exemplu de schimbare a culorii de fundal la hover */
+.contact-list a:hover svg path {
+  fill: rgb(111, 165, 231); /* Schimbați culoarea pictogramelor SVG la hover */
 }
 
 .contact-list {
@@ -390,6 +389,26 @@ ul {
 .designer-card:focus {
   background-color: #f2f2f2;
   border-color: #ccc;
+}
+.designers-list {
+  display: flex;
+  align-items: center;
+}
+
+.designer-card {
+  margin-right: 20px;
+}
+
+.designer-card svg {
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
+  fill: #000; /* Culoarea inițială a pictogramelor */
+  transition: fill 0.3s ease; /* Tranziție pentru efectul de hover */
+}
+
+.designer-card:hover svg {
+  fill: blue; /* Culoarea la hover */
 }
 
 /*cele 4 paragrafe mutate prin margin*/
