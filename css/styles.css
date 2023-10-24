@@ -625,7 +625,7 @@ section button {
 #regularcustomers svg:hover,
 #regularcustomers svg:focus {
   filter: brightness(1.2);
-  stroke: blue;
+  stroke: rgb(66, 111, 216);
   transition: fill 0.3s ease;
 }
 #regularcustomers h2 {
