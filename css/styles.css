@@ -224,7 +224,7 @@ ul {
 }
 
 .designer-card:hover svg {
-  fill: #007bff; /* Culoarea la hover */
+  fill: #007bff; 
 }
 
 #myDesigners.container {
@@ -391,6 +391,10 @@ ul {
   top: 1000px;
 }
 
+.designer-card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 #mySection {
   margin-bottom: 100px;
 }
@@ -515,8 +519,18 @@ section button {
   stroke: rgb(66, 111, 216);
   transition: fill 0.3s ease;
 }
+#regularcustomers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+  max-width: 3000px;
+  margin: auto;
+}
+
 #regularcustomers h2 {
   text-align: center;
+  margin-top: 50px;
 }
 #regularcustomers svg:nth-of-type(4):hover,
 #regularcustomers svg:nth-of-type(4):hover + .frame {
@@ -584,6 +598,7 @@ footer {
 
 .container {
   max-width: 1200px;
+  flex-flow: column;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -592,7 +607,7 @@ footer {
   flex-flow: row;
   width: 1200px;
   margin: 0 auto;
-  padding:0 20px;
+  padding: 0 20px;
   justify-content: space-between;
 }
 .contact-list {
